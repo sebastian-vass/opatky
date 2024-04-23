@@ -1,3 +1,11 @@
+.section-container {
+  margin: 0 10vw;
+}
+
+.hamburger {
+  color: #272727;
+}
+
 nav {
   background-color: #ffffff;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -35,6 +43,8 @@ body {
   font-size: 1.125rem; /* 18px */
   line-height: 1.4;
   color: #272727;
+  /*background-image: linear-gradient(to right, #fffbf4 0%, #ffe7ddd7 100%);*/
+  background-image: linear-gradient(to top, #fffbf4 0%, #ffe0d1d7 15%, #fffbf9d7 31%, #ffe0d1d7 75%, #fffbf4 100%);
 }
 
 h1, h2, h3, h4 {
@@ -92,17 +102,6 @@ table {
   border-spacing: 0;
 }
 
-img, video, svg {
-  display: block;
-  max-width: 100%;
-}
-
-/* -------------------------------- 
-
-Component 
-
--------------------------------- */
-
 .banner {
   display: block;
   text-decoration: none;
@@ -115,6 +114,7 @@ Component
               0 3.5px 6px hsla(230, 13%, 9%, 0.09);
   border-radius: 0.375em;
   transition: 0.3s;
+  margin-bottom: 2rem;
 }
 
 .banner__grid {
@@ -122,7 +122,16 @@ Component
   flex-direction: column;
 }
 
+.banner__grid__left {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 .banner__grid > * {
+  min-width: 0;
+}
+
+.banner__grid__left > * {
   min-width: 0;
 }
 
@@ -162,7 +171,15 @@ Component
     flex-direction: row-reverse;
   }
 
+  .banner__grid__left {
+    flex-direction: row-reverse;
+  }
+
   .banner__grid > * {
+    width: 50%;
+  }
+
+  .banner__grid__left > * {
     width: 50%;
   }
 
@@ -181,14 +198,14 @@ Component
   }
 
   .banner__text {
-    padding: 3rem;
+    padding: 3.5rem;
   }
 
   .banner__link-wrapper {
     margin-top: 2rem;
   }
 
-  .banner--invert .banner__grid {
+  .banner--invert .banner__grid .banner__grid__left {
     flex-direction: row;
   }
 
@@ -252,16 +269,12 @@ img, video, svg {
   }
 }
 
-/* variables */
 :root {
-  /* colors */
   --co1-color-primary-hsl: 250, 84%, 54%;
   --co1-color-bg-hsl: 0, 0%, 100%;
   --co1-color-contrast-high-hsl: 230, 7%, 23%;
   --co1-color-contrast-higher-hsl: 230, 13%, 9%;
   --co1-color-contrast-medium-hsl: 225, 4%, 47%;
-
-  /* spacing */
   --co1-space-2xs: 0.375rem;
   --co1-space-md: 1.25rem;
   --co1-space-lg: 2rem;
@@ -269,14 +282,12 @@ img, video, svg {
 
 @media(min-width: 64rem){
   :root {
-    /* spacing */
     --co1-space-2xs: 0.5625rem;
     --co1-space-md: 2rem;
     --co1-space-lg: 3.125rem;
   }
 }
 
-/* component */
 @media (min-width: 64rem) {
   .contact .google-maps {
     height: auto;
@@ -289,7 +300,6 @@ img, video, svg {
   display: none;
 }
 
-/* utility classes */
 .co1-radius-md {
   border-radius: 0.25em;
 }

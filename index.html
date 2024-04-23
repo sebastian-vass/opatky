@@ -1,208 +1,271 @@
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Opatovské oblatky</title>
-</head>
-<body>
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="sk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Titulok stránky</title>
-    <!-- Tailwind CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Opatovské oblatky</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tailwind and CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <!-- SEO meta tagy -->
-    <meta name="description" content="Popis stránky pre vyhľadávače.">
-    <meta name="keywords" content="kľúčové slová, pre, SEO">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-<body class="bg-gray-100">
-    <!-- Navigačný panel -->
+    <link rel="apple-touch-icon" sizes="57x57" href="images/57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="images/60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="images/76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="images/120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="images/144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="images/152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="images/192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="images/96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/16.png" />
+    <link rel="manifest" href="images/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/44.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="Popis stránky pre vyhľadávače." />
+    <meta name="keywords" content="Oplatky, Oblatky, Trenčín, Vianočné, Vianoce, Vianočne oplatky" />
+  </head>
+  <body class="bg-gray-100">
     <nav class="py-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <!-- Logo -->
-            <div class="text-white text-2xl font-bold"><img src="./images/logo.png" alt="Logo" width="120"></div>
-            <!-- Hamburger menu na menších zariadeniach -->
-            <div class="block lg:hidden">
-                <button id="menu-toggle" class="text-white focus:outline-none">
-                    <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
-                        <path v-if="!isOpen" fill-rule="evenodd" clip-rule="evenodd" d="M3 6h18v2H3V6zm18 5H3v2h18v-2zm0 5H3v2h18v-2z"></path>
-                        <path v-else fill-rule="evenodd" clip-rule="evenodd" d="M3 7h18v-2H3v2zm0 5h18v-2H3v2zm0 5h18v-2H3v2z"></path>
-                    </svg>
-                </button>
-            </div>
-            <!-- Navigácia -->
-            <ul class="hidden lg:flex">
-                <li class="mx-2"><a href="#sekcia1">Oblatky</a></li>
-                <li class="mx-2"><a href="#sekcia2">Trubičky</a></li>
-                <li class="mx-2"><a href="#sekcia3">Vianočné</a></li>
-                <li class="mx-2"><a href="#sekcia4">Kontakt</a></li>
-            </ul>
+      <div class="container mx-auto flex justify-between items-center px-4">
+        <div class="text-white text-2xl font-bold">
+          <img src="./images/logo.png" alt="Logo" width="120" />
         </div>
-        <!-- Rozbalovacie menu pre menšie zariadenia -->
-        <div id="menu" class="hidden lg:hidden">
-            <ul class="text-white">
-                <li class="my-2"><a href="#sekcia1">Oblatky</a></li>
-                <li class="my-2"><a href="#sekcia2">Trubičky</a></li>
-                <li class="my-2"><a href="#sekcia3">Vianočné</a></li>
-                <li class="my-2"><a href="#sekcia4">Kontakt</a></li>
-            </ul>
+        <!-- Hamburger menu na menších zariadeniach -->
+        <div class="block lg:hidden">
+          <button id="menu-toggle" class="focus:outline-none hamburger">
+            <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+              <path
+                v-if="!isOpen"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M3 6h18v2H3V6zm18 5H3v2h18v-2zm0 5H3v2h18v-2z"
+              ></path>
+              <path
+                v-else
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M3 7h18v-2H3v2zm0 5h18v-2H3v2zm0 5h18v-2H3v2z"
+              ></path>
+            </svg>
+          </button>
         </div>
+        <!-- Navigácia -->
+        <ul class="hidden lg:flex">
+          <li class="mx-2"><a href="#sekcia1">Oblatky</a></li>
+          <li class="mx-2"><a href="#sekcia2">Trubičky</a></li>
+          <li class="mx-2"><a href="#sekcia3">Vianočné</a></li>
+          <li class="mx-2"><a href="#sekcia4">Kontakt</a></li>
+        </ul>
+      </div>
+      <!-- Rozbalovacie menu pre menšie zariadenia -->
+      <div id="menu" class="hidden lg:hidden">
+        <ul class="text-white px-6 pt-4">
+          <li class="my-3"><a href="#sekcia1">Oblatky</a></li>
+          <li class="my-3"><a href="#sekcia2">Trubičky</a></li>
+          <li class="my-3"><a href="#sekcia3">Vianočné</a></li>
+          <li class="my-3"><a href="#sekcia4">Kontakt</a></li>
+        </ul>
+      </div>
     </nav>
-    
+
     <!-- Obsah stránky -->
-    <div class="container mx-auto mt-4">
+    <div class="section-container">
+      <div class="container mx-auto mt-4">
         <!-- Obsah stránky by sa sem umiestnil -->
-        <!-- Príklad: -->
         <section id="sekcia1" class="py-8">
-            <h1 class="font-bold">Opatovské Oblátky</h1>
-            <br>
-            <div href="#0" class="banner" aria-label="Shop now">
-              <div class="banner__grid">
-                <div aria-hidden="true">
-                  <figure class="banner__figure banner__figure__right" style="background-image: url(https://placehold.co/500x500);"></figure>
-                </div>
-            
-                <div class="banner__text">
-                  <h2>Slané</h2>
-                  
-                  <p class="banner__link-wrapper">
-                  <span>Zloženie: <b>múka pšeničná</b>, <b>mlieko</b>, <b>vajcia</b>, rastlinný olej slnečnicový, kukuričný škrob, soľ, rasca mletá</span>
-                  </p>
-                </div>
+          <h1 class="font-bold">Opatovské Oblátky</h1>
+          <br />
+          <div class="banner" aria-label="Shop now">
+            <div class="banner__grid">
+              <div aria-hidden="true">
+                <figure
+                  class="banner__figure banner__figure__right"
+                  style="background-image: url(https://placehold.co/500x500)"
+                ></figure>
+              </div>
+
+              <div class="banner__text">
+                <h2>Slané</h2>
+
+                <p class="banner__link-wrapper">
+                  <span
+                    >Zloženie: <b>pšeničná múka</b>, <b>mlieko</b>, <b>vajcia</b>, rastlinný olej
+                    slnečnicový, kukuričný škrob, soľ, rasca mletá</span
+                  >
+                </p>
               </div>
             </div>
+          </div>
 
-            <br />
+          <div class="banner" aria-label="Shop now">
+            <div class="banner__grid__left">
+              <div class="banner__text">
+                <h2>Cesnakové</h2>
 
-            <div href="#0" class="banner" aria-label="Shop now">
-              <div class="banner__grid">
+                <p class="banner__link-wrapper">
+                  <span
+                    >Zloženie: <b>pšeničná múka</b>, <b>mlieko</b>, <b>vajcia</b>, rastlinný olej
+                    slnečnicový, kukuričný škrob, soľ, cesnak sušený mletý (2%)</span
+                  >
+                </p>
+              </div>
 
-                <div aria-hidden="true" class="image-mobile-view">
-                  <figure class="banner__figure banner__figure__left" style="background-image: url(https://placehold.co/500x500);"></figure>
-                </div>
-
-                <div class="banner__text">
-                  <h2>Cesnakové</h2>
-                  
-                  <p class="banner__link-wrapper">
-                    <span>Zloženie: <b>múka pšeničná</b>, <b>mlieko</b>, <b>vajcia</b>, rastlinný olej slnečnicový, kukuričný škrob, soľ, cesnak sušený mletý (2%)</span>
-                  </p>
-                </div>
-                
-                <div aria-hidden="true" class="image-desktop-view">
-                  <figure class="banner__figure banner__figure__left" style="background-image: url(https://placehold.co/500x500);"></figure>
-                </div>
+              <div aria-hidden="true" class="image-desktop-view">
+                <figure
+                  class="banner__figure banner__figure__left"
+                  style="background-image: url(https://placehold.co/500x500)"
+                ></figure>
               </div>
             </div>
+          </div>
 
-            <br />
+          <div class="banner" aria-label="Shop now">
+            <div class="banner__grid">
+              <div aria-hidden="true">
+                <figure
+                  class="banner__figure banner__figure__right"
+                  style="background-image: url(https://placehold.co/500x500)"
+                ></figure>
+              </div>
 
-            <div href="#0" class="banner" aria-label="Shop now">
-              <div class="banner__grid">
-                <div aria-hidden="true">
-                  <figure class="banner__figure banner__figure__right" style="background-image: url(https://placehold.co/500x500);"></figure>
-                </div>
-            
-                <div class="banner__text">
-                  <h2>Bryndzové</h2>
-                  
-                  <p class="banner__link-wrapper">
-                  <span>Zloženie: <b>múka pšeničná</b>, <b>bryndza (12%)</b>, <b>mlieko</b>, <b>vajcia</b>, rastlinný olej slnečnicový, kukuričný škrob, soľ</span>
-                  </p>
-                </div>
+              <div class="banner__text">
+                <h2>Bryndzové</h2>
+
+                <p class="banner__link-wrapper">
+                  <span
+                    >Zloženie: <b>pšeničná múka</b>, <b>bryndza (12%)</b>, <b>mlieko</b>,
+                    <b>vajcia</b>, rastlinný olej slnečnicový, kukuričný škrob, soľ</span
+                  >
+                </p>
               </div>
             </div>
+          </div>
 
-            <br />
+          <div class="banner" id="sekcia3">
+            <div class="banner__grid__left">
+              <div class="banner__text">
+                <h2>Vianočné</h2>
 
-            <div href="#0" class="banner" id="sekcia3">
-              <div class="banner__grid">
-                <div class="banner__text">
-                  <h2>Vianočné</h2>
-                  
-                  <p class="banner__link-wrapper">
-                    <span>Zloženie: <b>múka pšeničná</b>, cukor, <b>vajcia</b>, rastlinný olej slnečnicový</span>
-                  </p>
-                </div>
-                
-                <div aria-hidden="true">
-                  <figure class="banner__figure banner__figure__left" style="background-image: url(https://placehold.co/500x500);"></figure>
-                </div>
+                <p class="banner__link-wrapper">
+                  <span
+                    >Zloženie: <b>pšeničná múka</b>, cukor, <b>vajcia</b>, rastlinný olej
+                    slnečnicový</span
+                  >
+                </p>
+              </div>
+
+              <div aria-hidden="true">
+                <figure
+                  class="banner__figure banner__figure__left"
+                  style="background-image: url(https://placehold.co/500x500)"
+                ></figure>
               </div>
             </div>
-
+          </div>
         </section>
 
         <section id="sekcia2" class="py-8">
-            <h1 class="font-bold">Trubičky</h1>
-            <br>
-            <div href="#0" class="banner" aria-label="Shop now">
-              <div class="banner__grid">
-                <div aria-hidden="true">
-                  <figure class="banner__figure banner__figure__right" style="background-image: url(https://placehold.co/500x500);"></figure>
+          <h1 class="font-bold">Trubičky</h1>
+          <br />
+          <div class="banner" aria-label="Shop now">
+            <div class="banner__grid">
+              <div aria-hidden="true">
+                <figure
+                  class="banner__figure banner__figure__right"
+                  style="background-image: url(https://placehold.co/500x500)"
+                ></figure>
+              </div>
+
+              <div class="banner__text">
+                <h2>Opatovské trubičky</h2>
+
+                <p class="banner__link-wrapper">
+                  <span
+                    >Zloženie: <b>pšeničná múka</b>, cukor, <b>vajcia</b>, rastlinný olej
+                    slnečnicový</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="sekcia4" class="py-8">
+          <section class="contact co1-position-relative co1-z-index-1">
+            <div class="co1-container co1-max-width-lg">
+              <div class="co1-margin-bottom-lg">
+                <h1 class="co1-text-center">Kontakt</h1>
+              </div>
+
+              <div class="co1-grid co1-gap-y-lg co1-gap-lg@md">
+                <div class="co1-col-6@md">
+                  <dl class="details-list details-list--rows">
+                    <div
+                      class="details-list__item co1-padding-y-md co1-flex@md co1-justify-between@md"
+                    >
+                      <dt class="co1-font-bold co1-margin-bottom-2xs co1-margin-bottom-0@md">
+                        
+                      </dt>
+                      <dd class="co1-line-height-md co1-text-right@md">
+                        Igor Krajčík - Oblátky <br />
+                        Opatovská 233/77 <br />911 01 Trenčín <br />Slovenská Republika
+                      </dd>
+                    </div>
+
+                    <div
+                      class="details-list__item co1-padding-y-md co1-flex@md co1-justify-between@md"
+                    >
+                      <dt class="co1-font-bold co1-margin-bottom-2xs co1-margin-bottom-0@md">
+                        
+                      </dt>
+                      <dd class="co1-line-height-md co1-text-right@md">
+                        <a href="mailto:krajcik.oblatky@gmail.com">krajcik.oblatky@gmail.com</a>
+                        <br />
+                        IČO: 53101626 <br />
+                        IČ DPH: SK1121617101
+                      </dd>
+                    </div>
+                  </dl>
                 </div>
-            
-                <div class="banner__text">
-                  <h2>Opatovské trubičky</h2>
-                  
-                  <p class="banner__link-wrapper">
-                  <span>Zloženie: <b>pšeničná múka</b>, cukor, <b>vajcia</b>, rastlinný olej slnečnicový</span>
-                  </p>
+
+                <div
+                  role="application"
+                  class="google-maps co1-radius-md co1-col-6@md co1-height-auto@md co1-padding-bottom-0@md js-google-maps"
+                >
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.3815743393275!2d18.083936476467315!3d48.90812197133901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4714a2732c7fc3fd%3A0xbbbbb74dcf01a8ac!2zT3BhdG92c2vDoSAyMzMvNzcsIDkxMSAwMSBUcmVuxI3DrW4tT3BhdG92w6EsIFNsb3ZlbnNrbw!5e0!3m2!1scs!2scz!4v1713475836049!5m2!1scs!2scz"
+                    width="600"
+                    height="300"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
                 </div>
               </div>
             </div>
+          </section>
         </section>
-
-        <section id="sekcia4" class="py-8 pb-16">
-<section class="contact co1-position-relative co1-z-index-1">
-  <div class="co1-container co1-max-width-lg">
-    <div class="co1-margin-bottom-lg">
-      <h1 class="co1-text-center">Kontakt</h1>
-    </div>
-
-    <div class="co1-grid co1-gap-y-lg co1-gap-lg@md">
-      <div class="co1-col-6@md">
-        <dl class="details-list details-list--rows">
-          <div class="details-list__item co1-padding-y-md co1-flex@md co1-justify-between@md">
-            <dt class="co1-font-bold co1-margin-bottom-2xs co1-margin-bottom-0@md">Adresa</dt>
-            <dd class="co1-line-height-md co1-text-right@md">
-              Igor Krajčík - Oblátky <br> Opatovská 233/77 <br>911 01 Trenčín <br>Slovenská Republika
-            </dd>
-          </div>
-        
-          <div class="details-list__item co1-padding-y-md co1-flex@md co1-justify-between@md">
-            <dt class="co1-font-bold co1-margin-bottom-2xs co1-margin-bottom-0@md">Email</dt>
-            <dd class="co1-line-height-md co1-text-right@md">
-              <a href="mailto:krajcik.oblatky@gmail.com">krajcik.oblatky@gmail.com</a> <br> IČO: 53101626 <br> IČ DPH: SK1121617101
-            </dd>
-          </div>
-        </dl>
       </div>
-
-      <div role="application" class="google-maps co1-radius-md co1-col-6@md co1-height-auto@md co1-padding-bottom-0@md js-google-maps" data-coordinates="51.5658015,-0.40339"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.3815743393275!2d18.083936476467315!3d48.90812197133901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4714a2732c7fc3fd%3A0xbbbbb74dcf01a8ac!2zT3BhdG92c2vDoSAyMzMvNzcsIDkxMSAwMSBUcmVuxI3DrW4tT3BhdG92w6EsIFNsb3ZlbnNrbw!5e0!3m2!1scs!2scz!4v1713475836049!5m2!1scs!2scz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-    </div>
-  </div>
-</section>
-        </section>
     </div>
 
     <!-- Pätička -->
-    <footer class="py-4 mt-8 bottom-0 w-full" style="z-index: 1000;">
-        <div class="container mx-auto text-center">
-            &copy; 2024 Opatovské oplatky. Všetky práva vyhradené.
-        </div>
+    <footer class="py-4 mt-8 bottom-0 w-full" style="z-index: 1000">
+      <div class="container mx-auto text-center">&copy; 2024 Opatovské oblatky.</div>
     </footer>
-    
-        <!-- JavaScript pre rozbaľovacie menu -->
+
+    <!-- JavaScript pre rozbaľovacie menu -->
     <script>
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            document.getElementById('menu').classList.toggle('hidden');
-        });
+      document.getElementById('menu-toggle').addEventListener('click', function () {
+        document.getElementById('menu').classList.toggle('hidden')
+      })
     </script>
-</body>
-</html>
-</body>
+  </body>
 </html>
