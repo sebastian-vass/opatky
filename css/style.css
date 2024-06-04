@@ -119,11 +119,19 @@ a {
 .banner__figure {
   height: 0;
   width: 100%;
-  padding-bottom: 50%;
+  padding-bottom: 75%;
   transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.banner__figure__right {
+  margin-left: -8dvw;
+}
+
+.banner__figure__left {
+  margin-left: 8dvw;
 }
 
 .banner__text {
@@ -166,6 +174,9 @@ a {
   .banner__figure__right {
     height: 100%;
     padding-bottom: 0;
+    margin-left: 0;
+    padding-bottom: 25%;
+    background-size: 60vh;
     -webkit-clip-path: polygon(100px 0%, 100% 0%, 100% 100%, 50px 100%);
             clip-path: polygon(100px 0%, 100% 0%, 100% 100%, 50px 100%);
   }
@@ -173,6 +184,9 @@ a {
   .banner__figure__left {
     height: 100%;
     padding-bottom: 0;
+    margin-left: 0;
+    padding-bottom: 25%;
+    background-size: 60vh;
     -webkit-clip-path: polygon(0px 0%, 100px 0%, 100% 100%, 0px 100%);
             clip-path: polygon(0px 0%, 90% 0%, 95% 100%, 0px 100%);
   }
