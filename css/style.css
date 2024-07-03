@@ -97,6 +97,30 @@ a {
   margin-bottom: 2rem;
 }
 
+.gramy{
+  font-size: 16px;
+  color: rgb(43, 44, 46);
+}
+
+.banner-kontakt {
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 0 0 1px hsla(230, 13%, 9%, 0.05),
+  0 0.3px 0.4px hsla(230, 13%, 9%, 0.02),
+  0 0.9px 1.5px hsla(230, 13%, 9%, 0.045),
+  0 3.5px 6px hsla(230, 13%, 9%, 0.09);
+  border-radius: 0.375em;
+  transition: 0.3s;
+  padding: 10px;
+  text-align: center;
+  display: none
+}
+
+a:link {
+  color: rgb(12, 12, 12);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
 .banner__grid {
   display: flex;
   flex-direction: column;
